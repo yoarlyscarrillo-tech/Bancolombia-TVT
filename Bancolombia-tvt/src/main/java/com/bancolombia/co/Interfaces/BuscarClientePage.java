@@ -24,12 +24,14 @@ public class BuscarClientePage {
     // Input dentro del dropdown para escribir
 
     // Input del dropdown tipo de búsqueda (usando placeholder)
-    public static final Target TipoBusquedaInput = Target.the("Input Tipo Búsqueda")
-            .locatedBy("//input[@placeholder='Tipo de búsqueda']");
+    public static Target getOpcionReactSelect(String valor) {
+        return Target.the("Opción " + valor)
+                .locatedBy("(//div[contains(@class, 'option')]//span[contains(text(), '" + valor + "')])[1]");
+    }
 
     // Botón BUSCAR
     public static final Target BtnBuscarModal = Target.the("Botón buscar")
-            .locatedBy("//button[contains(text(), 'BUSCAR')]");
+            .locatedBy("//button[contains(@class, 'MuiButton-contained') and contains(., 'BUSCAR')]");
     // Botón CANCELAR
     public static final Target BtnCancelar = Target.the("Botón cancelar")
             .locatedBy("//button[contains(text(), 'CANCELAR')]");
