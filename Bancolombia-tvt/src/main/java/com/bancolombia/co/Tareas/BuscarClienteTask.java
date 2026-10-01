@@ -45,9 +45,7 @@ public class BuscarClienteTask implements Task {
 
         // PASO 4: Click en BUSCAR
         actor.attemptsTo(
-                WaitUntil.the(BtnBuscarModal, isClickable())
-                        .forNoMoreThan(Duration.ofSeconds(10)),
-                Click.on(BtnBuscarModal)
+                 Click.on(BtnBuscarModal)
         );
     }
 

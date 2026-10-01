@@ -1,4 +1,3 @@
 "Story","Title","Result","Date","Stability","Duration (s)"
-"Login y búsqueda de cliente en TVT","Buscar cliente por Número de identificación","ERROR","2026-09-29T15:31:21.571-05:00[America/Bogota]","0.0","21.02"
 "Login en TVT","Validar que podamos iniciar sesion en TVT","SUCCESS","2026-09-22T09:58:36.038-05:00[America/Bogota]","0.0","24.53"
 "Login en TVT","Buscar cliente con Número de identificación","PENDING","2026-09-23T08:50:02.257-05:00[America/Bogota]","0.0","10.45"
