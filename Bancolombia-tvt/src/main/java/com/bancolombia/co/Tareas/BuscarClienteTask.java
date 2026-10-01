@@ -27,7 +27,7 @@ public class BuscarClienteTask implements Task {
     public <T extends Actor> void performAs(T actor) {
 
         // PASO 1: Ingresa documento
-        try { Thread.sleep(2000); } catch (InterruptedException e) { Thread.currentThread().interrupt(); }
+        try { Thread.sleep(500); } catch (InterruptedException e) { Thread.currentThread().interrupt(); }
 
         actor.attemptsTo(
                 WaitUntil.the(NumeroDeConsulta, isVisible()).forNoMoreThan(Duration.ofSeconds(20)),
@@ -35,7 +35,7 @@ public class BuscarClienteTask implements Task {
                 SendKeys.of(documento).into(NumeroDeConsulta)
         );
 
-        try { Thread.sleep(3000); } catch (InterruptedException e) { Thread.currentThread().interrupt(); }
+        try { Thread.sleep(1000); } catch (InterruptedException e) { Thread.currentThread().interrupt(); }
 
         // PASO 2: Click en dropdown tipo de búsqueda
         actor.attemptsTo(
@@ -43,34 +43,31 @@ public class BuscarClienteTask implements Task {
                 Click.on(BuscarClientePage.TipoBusquedaInput)
         );
 
-        try { Thread.sleep(2000); } catch (InterruptedException e) { Thread.currentThread().interrupt(); }
+        try { Thread.sleep(500); } catch (InterruptedException e) { Thread.currentThread().interrupt(); }
 
         // PASO 3: Ingresa tipo de búsqueda dinámicamente
         actor.attemptsTo(
                 SendKeys.of(tipoBusqueda).into(BuscarClientePage.TipoBusquedaInput)
         );
 
-        try { Thread.sleep(2000); } catch (InterruptedException e) { Thread.currentThread().interrupt(); }
+        try { Thread.sleep(1000); } catch (InterruptedException e) { Thread.currentThread().interrupt(); }
 
-        // Espera y selecciona la opción
-        Target opcionBusqueda = Target.the("Opción " + tipoBusqueda)
-                .locatedBy("//div[contains(@class, 'option')]//span[contains(text(), '" + tipoBusqueda + "')]");
+        // PASO 3B: Selecciona la opción usando ARROW_DOWN + ENTER (más robusto con react-select)
         actor.attemptsTo(
-                WaitUntil.the(opcionBusqueda, isClickable()).forNoMoreThan(Duration.ofSeconds(10)),
-                Click.on(opcionBusqueda)
+                SendKeys.of(Keys.ARROW_DOWN).into(BuscarClientePage.TipoBusquedaInput),
+                SendKeys.of(Keys.ENTER).into(BuscarClientePage.TipoBusquedaInput)
         );
 
-        try { Thread.sleep(3000); } catch (InterruptedException e) { Thread.currentThread().interrupt(); }
+        try { Thread.sleep(1000); } catch (InterruptedException e) { Thread.currentThread().interrupt(); }
 
-        // PASO 4: Click en BUSCAR (con espera y pausa LARGA)
+        // PASO 4: Click en BUSCAR
         actor.attemptsTo(
                 WaitUntil.the(BtnBuscarModal, isClickable())
                         .forNoMoreThan(Duration.ofSeconds(10))
         );
 
-        // Pausa MUY larga antes de hacer click
         try {
-            Thread.sleep(8000);  // Espera 8 segundos
+            Thread.sleep(2000);
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
         }
@@ -79,9 +76,8 @@ public class BuscarClienteTask implements Task {
                 Click.on(BtnBuscarModal)
         );
 
-        // Pausa MUY LARGA después del click para ver resultado
         try {
-            Thread.sleep(10000);  // Espera 10 segundos - VE LA TABLA
+            Thread.sleep(2000);
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
         }
@@ -92,9 +88,8 @@ public class BuscarClienteTask implements Task {
                         .forNoMoreThan(Duration.ofSeconds(15))
         );
 
-        // Pausa final para ver la validación
         try {
-            Thread.sleep(5000);  // Espera 5 segundos finales
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
         }

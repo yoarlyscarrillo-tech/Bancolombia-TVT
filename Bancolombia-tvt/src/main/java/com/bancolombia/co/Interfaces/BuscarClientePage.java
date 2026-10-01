@@ -33,9 +33,9 @@ public class BuscarClientePage {
     public static final Target TipoBusquedaInput = Target.the("Input Tipo Búsqueda")
             .locatedBy("//input[@id='react-select-2-input']");
 
-    // Botón BUSCAR - XPath basado en clase MUI y texto real "Buscar"
+    // Botón BUSCAR - XPath basado en clase MUI y texto real "Buscar" (usa normalize-space para el span)
     public static final Target BtnBuscarModal = Target.the("Botón buscar")
-            .locatedBy("//button[contains(@class, 'MuiButton-containedPrimary') and contains(text(), 'Buscar')]");
+            .locatedBy("/html/body/div[3]/div[3]/div/div[2]/button[1]");
 
     // Botón CANCELAR
     public static final Target BtnCancelar = Target.the("Botón cancelar")

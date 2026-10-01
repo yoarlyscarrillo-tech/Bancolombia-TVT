@@ -27,9 +27,9 @@ public class BusquedaClientesStep {
 
     @Entonces("Validamos que la búsqueda fue exitosa")
     public void validamosQueLaBúsquedaFueExitosa() {
-        // Pausa LARGA para visualizar la tabla cargada
+        // Pequeña pausa para visualizar la tabla cargada
         try {
-            Thread.sleep(8000);  // 8 segundos para ver la tabla completa
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
         }
@@ -43,9 +43,9 @@ public class BusquedaClientesStep {
                         .forNoMoreThan(Duration.ofSeconds(10))
         );
 
-        // Pausa MUY LARGA para ver la validación completada
+        // Pausa corta después de validación
         try {
-            Thread.sleep(12000);  // 12 segundos para confirmar el resultado
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
         }
@@ -54,6 +54,5 @@ public class BusquedaClientesStep {
         System.out.println("\n✅ VALIDACIÓN EXITOSA: Resultado de búsqueda visible en tabla");
         System.out.println("📋 Cliente encontrado correctamente");
         System.out.println("⏱️ Validación completada");
-        System.out.println("⏰ Pausa: 20 segundos totales");
     }
 }
