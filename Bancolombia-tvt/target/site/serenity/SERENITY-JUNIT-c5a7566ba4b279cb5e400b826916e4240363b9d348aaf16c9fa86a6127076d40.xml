@@ -1,12 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="1" name="Login y búsqueda de cliente en TVT" skipped="0" tests="1" time="42.06" timestamp="2026-10-01 10:56:20"><testcase name="Buscar cliente por Número de identificación"><failure message="Expected condition failed: waiting for By.xpath: //button[contains(@class, 'MuiButton-contained') and contains(., 'BUSCAR')] to be present (tried for 5 second(s) with 100 milliseconds interval)&#10;Build info: version: '4.6.0', revision: '79f1c02ae20'&#10;System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_442-442'&#10;Driver info: driver.version: unknown" type="net.thucydides.core.webdriver.exceptions.ElementShouldBePresentException">Expected condition failed: waiting for By.xpath: //button[contains(@class, 'MuiButton-contained') and contains(., 'BUSCAR')] to be present (tried for 5 second(s) with 100 milliseconds interval)
-Build info: version: '4.6.0', revision: '79f1c02ae20'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_442-442'
-Driver info: driver.version: unknown</failure><system-err>Expected condition failed: waiting for By.xpath: //button[contains(@class, 'MuiButton-contained') and contains(., 'BUSCAR')] to be present (tried for 5 second(s) with 100 milliseconds interval)
-Build info: version: '4.6.0', revision: '79f1c02ae20'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_442-442'
-Driver info: driver.version: unknown&#13;
-com.bancolombia.co.Tareas.BuscarClienteTask.performAs(BuscarClienteTask.java:47)&#13;
-StepDefinitions.BusquedaClientesStep.buscamosClienteConDocumentoYTipo(BusquedaClientesStep.java:18)&#13;
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="1" name="Login y búsqueda de cliente en TVT" skipped="0" tests="1" time="37.55" timestamp="2026-10-01 11:20:13"><testcase name="Buscar cliente por Número de identificación"><failure message="&#13;&#10;Expected: an element that is clickable&#13;&#10;     but: no matching element found by [Opción Numero de identificacion located with: //div[contains(@class, 'option')]//span[contains(text(), 'Numero de identificacion')]] was not clicked" type="java.lang.AssertionError">&#13;
+Expected: an element that is clickable&#13;
+     but: no matching element found by [Opción Numero de identificacion located with: //div[contains(@class, 'option')]//span[contains(text(), 'Numero de identificacion')]] was not clicked</failure><system-err>&#13;
+Expected: an element that is clickable&#13;
+     but: no matching element found by [Opción Numero de identificacion located with: //div[contains(@class, 'option')]//span[contains(text(), 'Numero de identificacion')]] was not clicked&#13;
+com.bancolombia.co.Tareas.BuscarClienteTask.performAs(BuscarClienteTask.java:58)&#13;
+StepDefinitions.BusquedaClientesStep.buscamosClienteConDocumentoYTipo(BusquedaClientesStep.java:23)&#13;
 io.cucumber.java.Invoker.doInvoke(Invoker.java:66)&#13;
 io.cucumber.java.Invoker.invoke(Invoker.java:24)&#13;
 io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)&#13;

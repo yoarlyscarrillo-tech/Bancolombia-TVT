@@ -151,7 +151,7 @@
             <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 01-10-2026 10:56</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 01-10-2026 11:20</span>
     <br style="clear:left"/>
 </div>
 
@@ -216,7 +216,7 @@
         <div class="table">
             <div class="row">
                 <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
-                    <span class="error-message error-message-title">Element should be present exception: Expected condition failed: waiting for By.xpath: //button[contains(@class, 'MuiButton-contained') and contains(., 'BUSCAR')] to be present (tried for 5 second(s) with 100 milliseconds interval)Build info: version: '4.6.0', revision: '79f1c02ae20'System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_442-442'Driver info: driver.version: unknown</span>
+                    <span class="error-message error-message-title">Assertion error: Expected: an element that is clickable but: no matching element found by [Opci&oacute;n Numero de identificacion located with: //div[contains(@class, 'option')]//span[contains(text(), 'Numero de identificacion')]] was not clicked</span>
                 </div>
                 <div class="col-sm-2">
                     <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-overall"
@@ -232,32 +232,24 @@
         <div class="collapse multi-collapse" id="stacktraceModal-overall">
             <div class="card">
                 <div class="card-header">
-                    <h4>net.thucydides.core.webdriver.exceptions.ElementShouldBePresentException </h4>
+                    <h4>java.lang.AssertionError </h4>
                 </div>
                 <div class="card-body">
                     <div>
-                        <pre>com.bancolombia.co.Tareas.BuscarClienteTask.performAs(BuscarClienteTask.java:47)<br />StepDefinitions.BusquedaClientesStep.buscamosClienteConDocumentoYTipo(BusquedaClientesStep.java:18)<br />io.cucumber.java.Invoker.doInvoke(Invoker.java:66)<br />io.cucumber.java.Invoker.invoke(Invoker.java:24)<br />io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)<br />io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)<br />io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)<br />io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)<br />io.cucumber.core.runner.TestStep.executeStep(TestStep.java:85)<br />io.cucumber.core.runner.TestStep.run(TestStep.java:57)<br />io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)<br />io.cucumber.core.runner.TestCase.run(TestCase.java:84)<br />io.cucumber.core.runner.Runner.runPickle(Runner.java:75)<br />io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:129)<br />io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)<br />io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:129)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)<br />io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:259)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:59)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)<br /></pre>
+                        <pre>com.bancolombia.co.Tareas.BuscarClienteTask.performAs(BuscarClienteTask.java:58)<br />StepDefinitions.BusquedaClientesStep.buscamosClienteConDocumentoYTipo(BusquedaClientesStep.java:23)<br />io.cucumber.java.Invoker.doInvoke(Invoker.java:66)<br />io.cucumber.java.Invoker.invoke(Invoker.java:24)<br />io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)<br />io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)<br />io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)<br />io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)<br />io.cucumber.core.runner.TestStep.executeStep(TestStep.java:85)<br />io.cucumber.core.runner.TestStep.run(TestStep.java:57)<br />io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)<br />io.cucumber.core.runner.TestCase.run(TestCase.java:84)<br />io.cucumber.core.runner.Runner.runPickle(Runner.java:75)<br />io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:129)<br />io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)<br />io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:129)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)<br />io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:259)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:59)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)<br /></pre>
                     </div>
 
-                    <h4>
-                        Caused by: org.openqa.selenium.TimeoutException
-                    </h4>
-                    <div>
-                            <pre>Expected condition failed: waiting for By.xpath: //button[contains(@class, 'MuiButton-contained') and contains(., 'BUSCAR')] to be present (tried for 5 second(s) with 100 milliseconds interval)<br>Build info: version: '4.6.0', revision: '79f1c02ae20'<br>System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_442-442'<br>Driver info: driver.version: unknown</pre>
-                        <pre>com.bancolombia.co.Tareas.BuscarClienteTask.performAs(BuscarClienteTask.java :47)<br />StepDefinitions.BusquedaClientesStep.buscamosClienteConDocumentoYTipo(BusquedaClientesStep.java :18)<br />io.cucumber.java.Invoker.doInvoke(Invoker.java :66)<br />io.cucumber.java.Invoker.invoke(Invoker.java :24)<br />io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java :47)<br />io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java :29)<br />io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java :66)<br />io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java :63)<br />io.cucumber.core.runner.TestStep.executeStep(TestStep.java :85)<br />io.cucumber.core.runner.TestStep.run(TestStep.java :57)<br />io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java :51)<br />io.cucumber.core.runner.TestCase.run(TestCase.java :84)<br />io.cucumber.core.runner.Runner.runPickle(Runner.java :75)<br />io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java :129)<br />io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java :23)<br />io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java :129)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java :144)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java :28)<br />io.cucumber.junit.FeatureRunner.run(FeatureRunner.java :137)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java :259)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java :59)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java :69)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java :74)<br /></pre>
-                    </div>
                 </div>
             </div>
         </div>
     </div>
                     <div class="panel-body">
-                        <a href="pagesource7632520528978675507.html" target="_blank" class="btn btn-info">HTML Source</a>
+                        <a href="pagesource4798297857613893585.html" target="_blank" class="btn btn-info">HTML Source</a>
                     </div>
             </div>
         <div class="slider-wrapper theme-default">
             <div id="slider">
-                <img src="72e90206b4ef1d106db5ca867f5e43c087a5219cd95b41cc4c78d5fd013ddedd.png" title=" Cuando Buscamos cliente con documento 30203 y tipo &quot;Numero de identificacion&quot;" width="1920"/>
-                <img src="72e90206b4ef1d106db5ca867f5e43c087a5219cd95b41cc4c78d5fd013ddedd.png" title=" Usuario clicks on Bot&oacute;n buscar: <span class='failing-color'>FAILURE</span>" width="1920"/>
+                <img src="97eca80ec364c9d662649d73f5499455057310f3ec49e1dad5f52f4c90b2cf17.png" title=" Cuando Buscamos cliente con documento 30203 y tipo &quot;Numero de identificacion&quot;: <span class='failing-color'>FAILURE</span>" width="1920"/>
             </div>
         </div>
 

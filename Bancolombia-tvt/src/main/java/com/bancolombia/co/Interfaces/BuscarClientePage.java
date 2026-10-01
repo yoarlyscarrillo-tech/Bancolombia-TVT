@@ -29,9 +29,14 @@ public class BuscarClientePage {
                 .locatedBy("(//div[contains(@class, 'option')]//span[contains(text(), '" + valor + "')])[1]");
     }
 
-    // Botón BUSCAR
+    // Input del dropdown tipo de búsqueda (react-select con ID específico)
+    public static final Target TipoBusquedaInput = Target.the("Input Tipo Búsqueda")
+            .locatedBy("//input[@id='react-select-2-input']");
+
+    // Botón BUSCAR - XPath basado en clase MUI y texto real "Buscar"
     public static final Target BtnBuscarModal = Target.the("Botón buscar")
-            .locatedBy("//button[contains(@class, 'MuiButton-contained') and contains(., 'BUSCAR')]");
+            .locatedBy("//button[contains(@class, 'MuiButton-containedPrimary') and contains(text(), 'Buscar')]");
+
     // Botón CANCELAR
     public static final Target BtnCancelar = Target.the("Botón cancelar")
             .locatedBy("//button[contains(text(), 'CANCELAR')]");
@@ -39,4 +44,8 @@ public class BuscarClientePage {
     // Modal
     public static final Target ModalBuscarCliente = Target.the("Modal buscar cliente")
             .locatedBy("//div[contains(text(), 'BUSCAR CLIENTE O CASO DE VENTA')]");
+
+    // Resultado de búsqueda - Validación de éxito
+    public static final Target ResultadoBusquedaCliente = Target.the("Resultado búsqueda cliente")
+            .locatedBy("//th[@scope='col' and contains(text(), '30203')]");
 }

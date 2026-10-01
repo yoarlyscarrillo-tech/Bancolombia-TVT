@@ -14,6 +14,7 @@ Característica: Login y búsqueda de cliente en TVT
     Cuando Damos clic en buscar cliente
     Entonces Validamos inicio de sesion exitoso
     Cuando Buscamos cliente con documento 30203 y tipo "Numero de identificacion"
+    Entonces Validamos que la búsqueda fue exitosa
 
   @test2
   Escenario: Buscar cliente por Id caso
