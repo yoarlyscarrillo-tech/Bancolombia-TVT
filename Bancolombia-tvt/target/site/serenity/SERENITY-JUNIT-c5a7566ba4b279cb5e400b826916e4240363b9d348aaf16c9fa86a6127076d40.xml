@@ -1,1 +1,1 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="0" name="Login y búsqueda de cliente en TVT" skipped="0" tests="1" time="24.37" timestamp="2026-10-01 11:43:19"><testcase name="Buscar cliente por Número de identificación"/></testsuite>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="0" name="Login y búsqueda de cliente en TVT" skipped="0" tests="1" time="47.23" timestamp="2026-10-02 11:17:19"><testcase name="Buscar cliente por Número de identificación"/></testsuite>
